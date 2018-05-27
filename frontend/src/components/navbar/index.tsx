@@ -8,6 +8,10 @@ import MaterialIcon from '../../vendor/react-material/material-icon';
 const Wrapper = styled.div`
   position: relative;
   z-index: 10;
+
+  > header {
+    top: 0;
+  }
 `;
 
 export class Navbar extends React.Component<{}, {}> {
