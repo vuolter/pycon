@@ -6,9 +6,9 @@ import {MDCTextFieldFoundation} from '@material/textfield';
 import Input from './Input';
 import Icon from './icon';
 import HelperText from './helper-text';
-import FloatingLabel from '@material/react-floating-label';
-import LineRipple from '@material/react-line-ripple';
-import NotchedOutline from '@material/react-notched-outline';
+import FloatingLabel from '../floating-label';
+import LineRipple from '../line-ripple';
+import NotchedOutline from '../notched-outline';
 
 class TextField extends React.Component {
 
