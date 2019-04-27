@@ -18,6 +18,7 @@ class ScheduleItemAdmin(admin.ModelAdmin):
     )
     autocomplete_fields = ('submission',)
     filter_horizontal = ('rooms',)
+    search_fields = ('type', 'title',)
 
 
 @admin.register(Room)

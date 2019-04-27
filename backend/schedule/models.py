@@ -39,7 +39,7 @@ class ScheduleItem(TimeFramedModel, TimeStampedModel):
         related_name='schedule_items'
     )
 
-    title = models.CharField(_('title'), max_length=100, blank=True)
+    title = models.CharField(_('title'), max_length=500, blank=True)
     description = models.TextField(_('description'), blank=True)
 
     type = models.CharField(

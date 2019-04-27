@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'languages.apps.LanguagesConfig',
     'submissions.apps.SubmissionsConfig',
     'schedule.apps.ScheduleConfig',
+    'legacy_site.apps.LegacySiteConfig',
 ]
 
 MIDDLEWARE = [
