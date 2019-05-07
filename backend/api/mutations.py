@@ -15,8 +15,8 @@ class ContextAwareDjangoModelFormMutation(mutation.DjangoModelFormMutation):
         abstract = True
 
     @classmethod
-    def get_form_kwargs(cls, root, info, **input):
-        kwargs = super().get_form_kwargs(root, info, **input)
+    def get_form_kwargs(cls, root, info, **_input):
+        kwargs = super().get_form_kwargs(root, info, **_input)
         kwargs['context'] = info.context
         return kwargs
 
@@ -36,8 +36,8 @@ class AuthOnlyDjangoFormMutation(ContextAwareDjangoModelFormMutation):
         abstract = True
 
     @classmethod
-    def mutate_and_get_payload(cls, root, info, **input):
+    def mutate_and_get_payload(cls, root, info, **_input):
         if not info.context.user.is_authenticated:
             raise GraphQLError('User not logged in')
 
-        return super().mutate_and_get_payload(root, info, **input)
+        return super().mutate_and_get_payload(root, info, **_input)
